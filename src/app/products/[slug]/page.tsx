@@ -1,4 +1,5 @@
 import {notFound} from "next/navigation";
+import Head from "next/head";
 
 type Props = {
   params: {
@@ -10,7 +11,9 @@ export default function Pants({ params }: Props) {
   if (params.slug === 'nothing') {
     notFound();
   }
-  return <h1>{params.slug}!! in app</h1>
+  return (
+    <h1>{params.slug}!! in app</h1>
+  );
 }
 
 export function generateStaticParams() {
