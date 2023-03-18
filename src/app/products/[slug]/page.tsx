@@ -1,6 +1,7 @@
 import {notFound} from "next/navigation";
 import Head from "next/head";
 import {getProduct, getProducts} from "@/service/products";
+import Image from "next/image";
 
 // export const revalidate = 3;
 
@@ -18,7 +19,15 @@ export default async function Product({ params: { slug } }: Props) {
   }
 
   return (
-    <h1>{product.name}!! in app</h1>
+    <>
+      <h1>{product.name}!! in app</h1>
+      <Image
+        src={`/images/${product?.image}`}
+        alt={product?.name}
+        width='300'
+        height='300'
+      />
+    </>
   );
 }
 
