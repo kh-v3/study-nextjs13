@@ -11,7 +11,7 @@ export default async function Products() {
 
   return (
     <>
-      <h1>제품 소개 페이지!</h1>
+      <h1>제품 소개 페이지! t1</h1>
       {/*<Image
         src='https://images.unsplash.com/photo-1441986300917-64674bd600d8'
         alt='shop'
